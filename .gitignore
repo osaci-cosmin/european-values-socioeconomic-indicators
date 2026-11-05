@@ -1,0 +1,43 @@
+# Python virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Raw data
+data/raw/
+
+# Intermediate data
+data/interim/
+
+# Temporary files
+*.tmp
+
+# Processed Parquet duplicates
+data/processed/*.parquet
+
+# Generated analytical Parquet outputs
+outputs/tables/*.parquet
+
+# Local VS Code settings
+.vscode/
+
+# Research outputs held back pending redistribution clearance
+data/processed/
+outputs/tables/
+outputs/figures/
+outputs/sql_validation/
+
+# Power BI report with embedded imported data
+powerbi/*.pbix
+
+# SQL scripts containing embedded analytical data
+# Held back pending data redistribution clearance
+sql/67_*_insert_*.sql
+
+# Allow the audited V1 Power BI report
+!powerbi/European_Values_V1.pbix
