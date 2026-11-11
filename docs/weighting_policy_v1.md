@@ -1,3 +1,4 @@
+
 # V1 Survey Weighting Policy
 # Politica de ponderare V1
 
@@ -79,16 +80,19 @@ equivalent to estimates calculated using `pspwght`.
 
 ### Regional and pooled estimates
 
-For analyses combining respondents from multiple countries, the project uses:
+V1 does not report regional or cross-country pooled respondent-level estimates.
 
-`anweight`
+For future analyses combining respondents from multiple countries, `anweight`
+is a candidate weight when the target estimand requires countries to contribute
+in proportion to their population sizes. The final weighting choice must be
+justified in relation to the target population and research question.
 
 Unlike purely within-country estimates, the population-size component matters
-when countries are pooled.
+when the aim is to estimate characteristics of a pooled population.
 
-This prevents countries with similar ESS sample sizes but very different
-population sizes from contributing equally simply because their survey samples
-are of comparable size.
+Using the appropriate population component avoids treating countries with
+similar ESS sample sizes but very different populations as if they contributed
+equally to a population-level estimate.
 
 ---
 
@@ -97,14 +101,25 @@ are of comparable size.
 Point-estimate weights alone are not sufficient for survey-design-based
 uncertainty estimation.
 
-Confidence intervals and standard errors will additionally account for:
+In V1, standard errors and confidence intervals were computed for selected
+country-level ESS survey estimates.
+
+The uncertainty-estimation workflow incorporates relevant ESS sampling-design
+information, including:
 
 - `psu`
 - `stratum`
 - `anweight`
 
-The exact variance-estimation procedure is documented separately before
-inferential results are produced.
+These survey-level uncertainty estimates are distinct from the uncertainty
+of country-level Pearson and Spearman correlation coefficients.
+
+Sampling uncertainty from ESS country estimates is not fully propagated
+into the 36 cross-country correlation coefficients.
+
+Consequently, the reported country-level correlations should not be
+interpreted as accounting for all uncertainty associated with the
+underlying ESS survey estimates.
 
 ---
 
@@ -122,7 +137,12 @@ For example:
 
 is a relationship between countries.
 
-The weighting strategy for such country-level statistical models must therefore
+In the 36 V1 country-level Pearson and Spearman correlations, each country
+with available data for a given variable pair contributes equally. ESS survey
+weights are used to estimate country-level aggregates, but are not reapplied
+to the correlations between countries.
+
+The weighting strategy for other country-level statistical models must therefore
 be chosen according to the country-level estimand rather than inherited
 mechanically from the respondent-level survey.
 
@@ -229,30 +249,48 @@ echivalente cu cele obținute folosind `pspwght`.
 
 ### Estimări regionale și pooled
 
-Pentru analize care combină respondenți din mai multe țări folosim:
+V1 nu raportează estimări regionale sau estimări pooled la nivel de respondent,
+obținute prin combinarea mai multor țări.
 
-`anweight`
+Pentru analize viitoare care combină respondenți din mai multe țări, `anweight`
+este o posibilă pondere atunci când estimandul urmărit presupune contribuții
+proporționale cu dimensiunea populației fiecărei țări. Alegerea finală a
+ponderilor trebuie justificată în funcție de populația-țintă și întrebarea
+de cercetare.
 
-În aceste analize componenta legată de mărimea populației devine importantă.
+Spre deosebire de estimările realizate separat în interiorul fiecărei țări,
+componenta legată de mărimea populației contează atunci când obiectivul este
+estimarea caracteristicilor unei populații combinate.
 
-Astfel evităm situația în care țări cu populații foarte diferite ar contribui
-aproximativ egal doar pentru că dimensiunile eșantioanelor ESS sunt similare.
+Utilizarea corespunzătoare a componentei de populație evită tratarea țărilor
+cu eșantioane ESS similare, dar populații foarte diferite, ca și cum ar
+contribui egal la o estimare la nivelul populației combinate.
 
 ---
 
 ### Confidence intervals și standard errors
 
-Ponderea utilizată pentru point estimates nu este suficientă pentru estimarea
-corectă a incertitudinii în cazul unui complex survey design.
+Ponderea utilizată pentru estimările punctuale nu este suficientă pentru
+estimarea incertitudinii în cazul unui design de sondaj complex.
 
-Confidence intervals și standard errors vor ține cont suplimentar de:
+În V1 au fost calculate erori standard și intervale de încredere pentru
+anumite estimări ESS agregate la nivel de țară.
+
+Procedura de estimare a incertitudinii încorporează informații relevante
+despre designul eșantionării ESS, inclusiv:
 
 - `psu`
 - `stratum`
 - `anweight`
 
-Procedura exactă de estimare a varianței va fi documentată separat înainte de
-producerea rezultatelor inferențiale.
+Aceste estimări ale incertitudinii la nivelul sondajului sunt distincte
+de incertitudinea coeficienților Pearson și Spearman calculați între țări.
+
+Incertitudinea de eșantionare asociată estimărilor ESS la nivel de țară
+nu este propagată integral în cele 36 de corelații dintre țări.
+
+Prin urmare, corelațiile raportate nu trebuie interpretate ca incluzând
+toate sursele de incertitudine asociate estimărilor ESS subiacente.
 
 ---
 
@@ -270,9 +308,14 @@ De exemplu:
 
 reprezintă o relație între țări.
 
-Prin urmare, politica de ponderare pentru modelele country-level trebuie să fie
-stabilită în funcție de estimandul de la nivelul țării și nu moștenită mecanic
-din microdate.
+În cele 36 de corelații Pearson și Spearman la nivel de țară din V1, fiecare
+țară pentru care există date în perechea analizată contribuie egal. Ponderile
+ESS sunt folosite pentru estimarea agregatelor naționale, dar nu sunt aplicate
+din nou la calcularea corelațiilor dintre țări.
+
+Prin urmare, politica de ponderare pentru alte modele country-level trebuie să
+fie stabilită în funcție de estimandul de la nivelul țării și nu moștenită
+mecanic din microdate.
 
 ---
 

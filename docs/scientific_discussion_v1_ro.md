@@ -256,7 +256,9 @@ Rezultatele oferă o bază pentru cercetări ulterioare, fără a stabili relaț
 
 ## Surse instituționale și documentație de date
 
-**European Social Survey (ESS).** ESS Round 11 — Integrated file, edition 4.2. ESS Data Portal. https://doi.org/10.21338/ess11e04_2
+**European Social Survey European Research Infrastructure (ESS ERIC) (2026).** *ESS11 - integrated file, edition 4.2* [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess11e04_2
+
+**Adaptarea datelor:** Date adaptate din ESS Round 11, ediția 4.2. Proiectul utilizează estimări agregate la nivel de țară, ponderate pe baza datelor ESS originale la nivel de respondent.
 
 **Eurostat.** GDP per capita in PPS, dataset `tec00114`, cu sursa `prc_ppp_ind_1`. https://doi.org/10.2908/tec00114
 

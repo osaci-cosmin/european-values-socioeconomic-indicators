@@ -192,4 +192,4 @@ Nu sunt susținute concluzii cauzale, inferențe directe la nivel individual sau
 
 ---
 
-**Status editorial:** FINAL — Step 66. Rezultatele numerice și analizele de sensibilitate au fost confruntate cu Scientific Evidence Matrix V1, validată independent prin Step 65. Interpretarea teoretică și bibliografia sunt prezentate separat în `scientific_discussion_v1_draft.md`. Documentarea tehnică completă a celor șase indicatori Eurostat rămâne o componentă distinctă a documentației metodologice a proiectului.
+**Status editorial:** FINAL — Step 66. Rezultatele numerice și analizele de sensibilitate au fost confruntate cu Scientific Evidence Matrix V1, validată independent prin Step 65. Interpretarea teoretică și bibliografia sunt prezentate separat în `scientific_discussion_v1_ro.md`. Documentarea tehnică completă a celor șase indicatori Eurostat rămâne o componentă distinctă a documentației metodologice a proiectului.
