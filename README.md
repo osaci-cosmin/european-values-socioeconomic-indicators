@@ -19,6 +19,10 @@ The technical architecture integrates **Python, ESS and Eurostat data sources, M
 
 > **Research boundary:** The primary statistical unit is the country. The reported associations are exploratory and descriptive, not causal. Country-level correlations must not be interpreted as individual-level relationships or generalized automatically to all European countries.
 
+**Scientific documentation:** [Results (English)](docs/scientific_results_v1_en.md) · [Results (Română)](docs/scientific_results_v1_ro.md) · [Discussion (English)](docs/scientific_discussion_v1_en.md) · [Discussion (Română)](docs/scientific_discussion_v1_ro.md) · [Survey Weighting Policy (English / Română)](docs/weighting_policy_v1.md)
+
+**Repository access:** The GitHub repository is currently private while the applicable ESS data-reuse and redistribution conditions for data-containing artifacts are being clarified. A public release has not been completed.
+
 ---
 
 ## 1. Project Overview
@@ -447,8 +451,10 @@ In particular, unchanged coefficients in exclusion scenarios where a country was
 
 The complete interpretation is documented in:
 
-- [Scientific Results V1](docs/scientific_results_v1_draft.md)
-- [Scientific Discussion V1](docs/scientific_discussion_v1_draft.md)
+- [Scientific Results V1 — English](docs/scientific_results_v1_en.md)
+- [Scientific Results V1 — Română](docs/scientific_results_v1_ro.md)
+- [Scientific Discussion V1 — English](docs/scientific_discussion_v1_en.md)
+- [Scientific Discussion V1 — Română](docs/scientific_discussion_v1_ro.md)
 
 The detailed numerical evidence matrix and generated statistical outputs are retained in the local project environment.
 
@@ -548,13 +554,13 @@ The project was implemented locally using numbered SQL scripts for:
 - Table validation.
 - Analytical exports.
 
-The public SQL code includes schema definitions and available validation/export logic.
+The tracked SQL code includes schema definitions and available validation/export logic.
 
-Eight SQL `INSERT` scripts contain embedded analytical values and are currently excluded from public Git tracking pending redistribution clearance.
+Eight SQL `INSERT` scripts contain embedded analytical values and are currently excluded from Git tracking pending redistribution clearance.
 
 Those scripts remain in the local development environment.
 
-Consequently, the public SQL files document the database structure but do not currently provide a complete, standalone database-population workflow.
+Consequently, the tracked SQL files document the database structure but do not currently provide a complete, standalone database-population workflow.
 
 ---
 
@@ -618,7 +624,7 @@ The original local connection settings are not expected to work automatically on
 
 ### Security and distribution review
 
-Before preparation for public Git tracking, the PBIX underwent local checks covering:
+During preparation for repository distribution, the PBIX underwent local checks covering:
 
 - The visible Power BI semantic model.
 - The Power Query query list.
@@ -638,7 +644,7 @@ These checks are risk-reduction measures, not proof that all binary model conten
 
 ## 14. Repository Structure
 
-The public repository is organized around source code, configuration, documentation, and the intended Power BI reporting artifact.
+The repository is organized around source code, configuration, bilingual scientific documentation, and the Power BI reporting artifact. It remains private pending clarification of the applicable ESS redistribution conditions.
 
 ```text
 european-values-ideology-socioeconomic/
@@ -684,9 +690,9 @@ sql/
 .vscode/
 ```
 
-The original ESS microdata, intermediate datasets, derived data tables, generated analytical figures, database exports, and embedded-value SQL INSERT scripts are currently excluded from public Git tracking.
+The original ESS microdata, intermediate datasets, derived data tables, generated analytical figures, database exports, and embedded-value SQL INSERT scripts are currently excluded from Git tracking.
 
-The full PBIX has been designated as a candidate for the public release, subject to resolving the applicable redistribution conditions.
+The full PBIX is included in the private-repository preparation, but it must not be made publicly downloadable without resolving the applicable redistribution conditions.
 
 This separation does not imply that all derived statistics or figures are legally prohibited from redistribution.
 
@@ -741,7 +747,7 @@ These results do not constitute a full functional test or independent reproducti
 
 The project follows a reproducibility-oriented analytical design.
 
-However, the public repository is not currently a fully automated, single-command reproduction environment.
+However, the repository is not currently a fully automated, single-command reproduction environment.
 
 ### General reproduction procedure
 
@@ -777,11 +783,11 @@ In particular:
 
 - Original ESS microdata must be obtained from the official source.
 - Derived analytical datasets are retained locally.
-- Eight data-containing SQL INSERT scripts are not publicly distributed.
+- Eight data-containing SQL INSERT scripts are excluded from Git tracking.
 - Some validation procedures depend on locally generated outputs.
 - The original Power BI report uses a local MySQL data source.
 
-The published Python and SQL code therefore documents the analytical methods and relational architecture, but the public repository alone does not currently provide a fully automated database-population workflow.
+The tracked Python and SQL code therefore documents the analytical methods and relational architecture, but the repository alone does not currently provide a fully automated database-population workflow.
 
 **A complete independent end-to-end rerun in a clean environment has not yet been documented as successfully completed.**
 
@@ -847,17 +853,18 @@ Observed correlations are interpreted as statistical associations only.
 
 Detailed discussion:
 
-[Scientific Discussion V1](docs/scientific_discussion_v1_draft.md)
+[Scientific Discussion V1 — English](docs/scientific_discussion_v1_en.md)
 
 ---
 
 ## 18. Scientific Documentation
 
-The project maintains separate documents for results, interpretation, and weighting methodology.
+The project maintains separate documents for results, interpretation, and weighting methodology. Scientific Results and Scientific Discussion are available in English and Romanian; the Survey Weighting Policy is bilingual within one file.
 
 ### Scientific Results V1
 
-[scientific_results_v1_draft.md](docs/scientific_results_v1_draft.md)
+- [English: `scientific_results_v1_en.md`](docs/scientific_results_v1_en.md)
+- [Română: `scientific_results_v1_ro.md`](docs/scientific_results_v1_ro.md)
 
 Documents:
 
@@ -870,7 +877,8 @@ Documents:
 
 ### Scientific Discussion V1
 
-[scientific_discussion_v1_draft.md](docs/scientific_discussion_v1_draft.md)
+- [English: `scientific_discussion_v1_en.md`](docs/scientific_discussion_v1_en.md)
+- [Română: `scientific_discussion_v1_ro.md`](docs/scientific_discussion_v1_ro.md)
 
 Provides:
 
@@ -883,7 +891,7 @@ Provides:
 
 ### Survey Weighting Policy V1
 
-[weighting_policy_v1.md](docs/weighting_policy_v1.md)
+[`weighting_policy_v1.md` — English and Română](docs/weighting_policy_v1.md)
 
 Explains:
 
@@ -903,15 +911,13 @@ The project uses:
 
 **ESS Round 11 — Integrated File, Edition 4.2**
 
-The official ESS conditions-of-use page identifies **CC BY-NC-SA 4.0** for ESS data and recommends linking to the original ESS Data Portal rather than redistributing complete datasets on external websites.
+The [official Norwegian dataset catalogue entry for ESS11, edition 4.2](https://data.norge.no/en/datasets/b2d31085-5d2e-3c4f-b013-0903ba3194cd/ess11-integrated-file-edition-42) identifies **CC BY 4.0**, whereas [ESS project documentation](https://www.europeansocialsurvey.org/sites/default/files/2024-04/ESS012_projection_specification_v2.pdf) refers to **CC BY-NC-SA 4.0** and noncommercial access. These sources are not treated here as establishing a definitive licence determination for redistribution of this project's derived artifacts.
 
-These conditions include attribution, noncommercial-use restrictions, ShareAlike requirements for covered adaptations, and avoidance of implied endorsement.
+The applicable licence and the conditions for public redistribution of ESS-derived country estimates, including those embedded in the Power BI PBIX, require clarification from the relevant data provider.
 
-Separate official catalogue metadata have displayed CC BY 4.0 for this particular edition. The applicable conditions for redistribution in a professional public portfolio require clarification rather than assuming the more permissive interpretation.
+**The GitHub repository is kept private pending this clarification.** Private hosting does not itself override applicable licensing or data-protection obligations.
 
-In particular, the inclusion of aggregated ESS-derived values in a publicly downloadable PBIX must be evaluated under the applicable licence.
-
-The project does not redistribute the original ESS respondent-level microdata.
+The project does not redistribute original ESS respondent-level microdata, and links to the official ESS dataset rather than mirroring the source file.
 
 ### Official ESS data citation
 
@@ -945,7 +951,7 @@ The availability of Eurostat data for reuse does not override any separate restr
 
 Scientific references are documented in:
 
-[Scientific Discussion V1 — Bibliography](docs/scientific_discussion_v1_draft.md)
+[Scientific Discussion V1 — English bibliography](docs/scientific_discussion_v1_en.md) (also available [in Romanian](docs/scientific_discussion_v1_ro.md))
 
 The literature provides theoretical and empirical context for interpreting the project's exploratory results.
 
@@ -1012,12 +1018,14 @@ Publication of data-containing artifacts must also satisfy applicable licensing 
 
 ### Repository preparation
 
+- The GitHub repository is currently private while ESS-derived artifact redistribution conditions are clarified.
+
 - Python scripts have undergone static syntax and import checks.
 - SQL schema and validation scripts have undergone structural review.
 - Python dependencies have been updated.
 - Sensitive local configuration and raw data are excluded.
 - Derived analytical exports and data-containing SQL INSERT scripts are withheld.
-- The complete Power BI PBIX is an intended publication artifact, subject to applicable data-redistribution conditions.
+- The complete Power BI PBIX is retained in the private-repository preparation; any public release remains subject to applicable data-redistribution conditions.
 - Complete independent clean-environment reproduction remains unverified.
 
 The project does not claim causal inference, proven measurement invariance across the analyzed countries, or a fully automated production deployment.
