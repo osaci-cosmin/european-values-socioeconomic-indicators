@@ -1047,3 +1047,24 @@ Potential future extensions include:
 - Improved deployment and sharing of interactive analytical reports.
 
 These are future development directions, not completed features of V1.
+
+## Power BI Dashboard Preview
+
+The Power BI report provides an interactive, country-level exploration of European social values and socioeconomic indicators, including correlation analysis, robustness assessment, country comparisons, and data-quality monitoring.
+
+### Executive Overview
+
+![Executive Overview](powerbi/screenshots/01_executive_overview.png)
+
+### Correlation Explorer
+
+![Correlation Explorer](powerbi/screenshots/02_correlation_explorer.png)
+
+### Additional Dashboard Pages
+
+- [Country Comparison](powerbi/screenshots/03_country_comparison.png)
+- [Data Quality & Coverage](powerbi/screenshots/04_data_quality_overview.png)
+- [Data Availability Matrix](powerbi/screenshots/04_data_quality_matrix.png)
+- [Data Sources & Methodology](powerbi/screenshots/05_data_sources_methodology.png)
+
+The visualizations present exploratory statistical associations, not causal relationships. The number of available countries varies across indicator pairs.
