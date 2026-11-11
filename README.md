@@ -1068,3 +1068,15 @@ The Power BI report provides an interactive, country-level exploration of Europe
 - [Data Sources & Methodology](powerbi/screenshots/05_data_sources_methodology.png)
 
 The visualizations present exploratory statistical associations, not causal relationships. The number of available countries varies across indicator pairs.
+
+## AI Assistance & Transparency
+
+Generative AI tools, including ChatGPT, were used extensively throughout the development of this project.
+
+AI assistance supported Python, SQL and DAX code development, debugging, methodological discussions, analytical validation procedures, documentation, and Power BI implementation.
+
+The project was developed iteratively, with analytical outputs subjected to computational consistency checks, database comparisons, and documented validation procedures where applicable.
+
+**Important limitations:** AI-generated content and suggestions should not be considered independently verified solely because they were incorporated into the project. A complete end-to-end reproduction in a clean environment has not yet been demonstrated.
+
+The project author retains responsibility for the analytical decisions, interpretation of findings, documentation, and any remaining errors or limitations.
