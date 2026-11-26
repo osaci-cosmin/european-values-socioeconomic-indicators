@@ -1054,6 +1054,16 @@ These are future development directions, not completed features of V1.
 
 The Power BI report provides an interactive, country-level exploration of European social values and socioeconomic indicators, including correlation analysis, robustness assessment, country comparisons, and data-quality monitoring.
 
+### Download the Power BI Report
+
+[Download Power BI Dashboard (.pbix)](https://github.com/osaci-cosmin/european-values-socioeconomic-indicators/raw/main/powerbi/European_Values_V1.pbix)
+
+**Requirements:** Microsoft Power BI Desktop.
+
+The report contains imported analytical data and can be explored without connecting to the original MySQL database. Refreshing the data requires additional database configuration.
+
+Data reuse is subject to the conditions described in [DATA_LICENSE.md](DATA_LICENSE.md).
+
 ### Executive Overview
 
 ![Executive Overview](powerbi/screenshots/01_executive_overview.png)
