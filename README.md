@@ -21,7 +21,7 @@ The technical architecture integrates **Python, ESS and Eurostat data sources, M
 
 **Scientific documentation:** [Results (English)](docs/scientific_results_v1_en.md) · [Results (Română)](docs/scientific_results_v1_ro.md) · [Discussion (English)](docs/scientific_discussion_v1_en.md) · [Discussion (Română)](docs/scientific_discussion_v1_ro.md) · [Survey Weighting Policy (English / Română)](docs/weighting_policy_v1.md)
 
-**Repository access:** The GitHub repository is currently private while the applicable ESS data-reuse and redistribution conditions for data-containing artifacts are being clarified. A public release has not been completed.
+**Repository access:** The ESS Data Archive at Sikt has clarified the applicable ESS data licence. Public redistribution is subject to the applicable data licensing conditions.
 
 ---
 
@@ -556,7 +556,7 @@ The project was implemented locally using numbered SQL scripts for:
 
 The tracked SQL code includes schema definitions and available validation/export logic.
 
-Eight SQL `INSERT` scripts contain embedded analytical values and are currently excluded from Git tracking pending redistribution clearance.
+Eight SQL `INSERT` scripts contain embedded analytical values and remain intentionally excluded from Git tracking.
 
 Those scripts remain in the local development environment.
 
@@ -644,7 +644,7 @@ These checks are risk-reduction measures, not proof that all binary model conten
 
 ## 14. Repository Structure
 
-The repository is organized around source code, configuration, bilingual scientific documentation, and the Power BI reporting artifact. It remains private pending clarification of the applicable ESS redistribution conditions.
+The repository is organized around source code, configuration, bilingual scientific documentation, and the Power BI reporting artifact.
 
 ```text
 european-values-ideology-socioeconomic/
@@ -692,7 +692,7 @@ sql/
 
 The original ESS microdata, intermediate datasets, derived data tables, generated analytical figures, database exports, and embedded-value SQL INSERT scripts are currently excluded from Git tracking.
 
-The full PBIX is included in the private-repository preparation, but it must not be made publicly downloadable without resolving the applicable redistribution conditions.
+The full PBIX is included in the repository. Its public distribution remains subject to applicable ESS and Eurostat licensing conditions.
 
 This separation does not imply that all derived statistics or figures are legally prohibited from redistribution.
 
@@ -905,17 +905,19 @@ Explains:
 
 ## 19. Data Licensing, Citation and Responsible Reuse
 
+For detailed licensing and attribution requirements, see [DATA_LICENSE.md](DATA_LICENSE.md).
+
 ### European Social Survey
 
 The project uses:
 
 **ESS Round 11 — Integrated File, Edition 4.2**
 
-The [official Norwegian dataset catalogue entry for ESS11, edition 4.2](https://data.norge.no/en/datasets/b2d31085-5d2e-3c4f-b013-0903ba3194cd/ess11-integrated-file-edition-42) identifies **CC BY 4.0**, whereas [ESS project documentation](https://www.europeansocialsurvey.org/sites/default/files/2024-04/ESS012_projection_specification_v2.pdf) refers to **CC BY-NC-SA 4.0** and noncommercial access. These sources are not treated here as establishing a definitive licence determination for redistribution of this project's derived artifacts.
+Written clarification received from the ESS Data Archive at Sikt confirms that ESS data are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), whereas ESS documentation is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Official ESS conditions of use: https://www.europeansocialsurvey.org/contact/disclaimer
 
-The applicable licence and the conditions for public redistribution of ESS-derived country estimates, including those embedded in the Power BI PBIX, require clarification from the relevant data provider.
+The ESS Data Archive indicated that public distribution of aggregated country-level estimates, derived statistical results, Power BI reports and screenshots, including professional portfolio use, is permissible in principle, provided that the applicable licence conditions are respected. This guidance is retained as written correspondence and does not constitute a formal legal opinion.
 
-**The GitHub repository is kept private pending this clarification.** Private hosting does not itself override applicable licensing or data-protection obligations.
+**Public redistribution remains subject to applicable licensing and data-protection obligations.**
 
 The project does not redistribute original ESS respondent-level microdata, and links to the official ESS dataset rather than mirroring the source file.
 
@@ -986,7 +988,7 @@ Before publication preparation, the project underwent several local checks.
 - Selected PBIX metadata and report-definition components were scanned for sensitive patterns.
 - The full data model remains an imported analytical-data container.
 - Original ESS microdata remain excluded from Git.
-- Derived data exports and data-containing SQL INSERT scripts remain excluded pending redistribution clearance.
+- Derived data exports and data-containing SQL INSERT scripts remain intentionally excluded from Git tracking.
 
 These are risk-reduction controls, not absolute guarantees that no sensitive information exists.
 
@@ -1018,14 +1020,14 @@ Publication of data-containing artifacts must also satisfy applicable licensing 
 
 ### Repository preparation
 
-- The GitHub repository is currently private while ESS-derived artifact redistribution conditions are clarified.
+- ESS data licensing has been clarified by the ESS Data Archive at Sikt. Public redistribution is subject to applicable source-data licensing conditions.
 
 - Python scripts have undergone static syntax and import checks.
 - SQL schema and validation scripts have undergone structural review.
 - Python dependencies have been updated.
 - Sensitive local configuration and raw data are excluded.
 - Derived analytical exports and data-containing SQL INSERT scripts are withheld.
-- The complete Power BI PBIX is retained in the private-repository preparation; any public release remains subject to applicable data-redistribution conditions.
+- The complete Power BI PBIX is retained in the repository. Public distribution is subject to applicable source-data licensing conditions.
 - Complete independent clean-environment reproduction remains unverified.
 
 The project does not claim causal inference, proven measurement invariance across the analyzed countries, or a fully automated production deployment.
